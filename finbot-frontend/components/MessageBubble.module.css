@@ -1,0 +1,39 @@
+/* Row wrapper */
+.messageRow {
+    display: flex;
+    width: 100%;
+}
+
+/* LEFT (Assistant) */
+.assistant {
+    justify-content: flex-start;
+}
+
+/* RIGHT (User) */
+.user {
+    justify-content: flex-end;
+}
+
+/* Bubble */
+.messageBubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Assistant bubble */
+.assistant .messageBubble {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-bottom-left-radius: 4px;
+}
+
+/* User bubble */
+.user .messageBubble {
+    background: #3b82f6;
+    color: white;
+    border-bottom-right-radius: 4px;
+}

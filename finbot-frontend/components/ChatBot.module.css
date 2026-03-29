@@ -1,0 +1,103 @@
+/* Container */
+.chatbox {
+    width: 100%;
+    max-width: 700px;
+    height: 85vh;
+    margin: 20px auto;
+    background: #0f172a;
+    /* dark navy */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.thinking {
+    color: #e2e8f0;
+}
+
+/* Header */
+.chatboxHeader {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #020617;
+    color: #e2e8f0;
+    border-bottom: 1px solid #1e293b;
+}
+
+.logoutBtn {
+    float: right;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.logoutBtn:hover {
+    background: #dc2626;
+}
+
+/* Messages area */
+.chatboxMessages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Scrollbar (optional but nice) */
+.chatboxMessages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatboxMessages::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+/* Input area */
+.chatboxInput {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #1e293b;
+    background: #020617;
+}
+
+.chatboxInput input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.chatboxInput input::placeholder {
+    color: #64748b;
+}
+
+.chatboxInput button {
+    margin-left: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.chatboxInput button:hover {
+    background: #2563eb;
+}
