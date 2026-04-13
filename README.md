@@ -10,10 +10,6 @@ The system is designed to:
 - Prevent unauthorized access, prompt injection, and hallucinated outputs
 - Provide **accurate, cited, and grounded responses**
 - Be evaluated rigorously using **RAGAS metrics**
-  
-✅ This repository has the FinBot GitHub App installed on it. It uses LangGraph with a multi-agent architecture.
-✅ **LangSmith** – Tracing & observability
-✅ **Azure AI Foundry** – This is deployed on Azure AI Foundry
 
 This is deployed on **Azure AI Foundry**. **GitHubApp** is installed on this app. It uses a **multi‑agent system** with **LangGraph** for the operations. **LangSmith** is used for tracing and observability.
 
