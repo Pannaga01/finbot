@@ -2,6 +2,10 @@
 
 ## 📌 Overview
 
+✅ This repository has the FinBot GitHub App installed on it.
+
+✅ The project uses LangGraph with a multi-agent architecture.
+
 **FinBot** is an enterprise-grade Retrieval-Augmented Generation (RAG) system built for **FinSolve Technologies**, a B2B fintech company.
 
 The system is designed to:
