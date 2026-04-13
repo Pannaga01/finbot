@@ -11,6 +11,8 @@ The system is designed to:
 - Provide **accurate, cited, and grounded responses**
 - Be evaluated rigorously using **RAGAS metrics**
 
+This is deployed on **Azure AI Foundry**. **GitHubApp** is installed on this app. It uses a **multi‑agent system** with **LangGraph** for the operations. **LangSmith** is used for tracing and observability.
+
 ---
 
 ## 🎯 Objective
@@ -57,7 +59,6 @@ Final Answer + Citations
 - **Qdrant** – Vector Database
 - **Docling** – Structured document parsing & hierarchical chunking
 - **Semantic Router** – Query intent classification
-- **LangSmith** – Tracing & observability
 
 ---
 
