@@ -15,6 +15,8 @@ The system is designed to:
 ✅ **LangSmith** – Tracing & observability
 ✅ **Azure AI Foundry** – This is deployed on Azure AI Foundry
 
+This is deployed on **Azure AI Foundry**. **GitHubApp** is installed on this app. It uses a **multi‑agent system** with **LangGraph** for the operations. **LangSmith** is used for tracing and observability.
+
 ---
 
 ## 🎯 Objective
