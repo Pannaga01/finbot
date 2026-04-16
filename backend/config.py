@@ -38,7 +38,7 @@ MAX_QUERIES = 20
 
 COLLECTION_NAME = "finbot"
 
-GROQ_MODEL  = "openai/gpt-oss-safeguard-20b"
+GROQ_MODEL  = "llama-3.3-70b-versatile"
 
 SYSTEM_PROMPT = """You are a helpful assistant.
 Answer the user's question using ONLY the context provided below.

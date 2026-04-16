@@ -11,3 +11,6 @@ docling-hierarchical-pdf
 requests
 pydantic
 langsmith
+uvicorn
+python-dotenv
+pandas

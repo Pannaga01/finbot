@@ -1,0 +1,27 @@
+# Environment variables (contains secrets)
+.env
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Qdrant local data
+backend/qdrant_data/
+qdrant_data/
+
+# Node
+node_modules/
+.next/
+finbot-frontend/node_modules/
+finbot-frontend/.next/
+
+# OS
+.DS_Store
+Thumbs.db

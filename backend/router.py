@@ -59,7 +59,7 @@ def detect_pii(text: str):
 # ---------------------------------------------------------------------------
 # Encoder
 # ---------------------------------------------------------------------------
-encoder = HuggingFaceEncoder(name="Qwen/Qwen3-Embedding-0.6B")
+encoder = HuggingFaceEncoder(name="sentence-transformers/all-mpnet-base-v2")
 
 
 # ---------------------------------------------------------------------------
@@ -76,7 +76,10 @@ engineering = Route(
         "What are the open engineering tickets this sprint?",
         "How do I set up the local development environment?",
         "What is the SLA for our API uptime?",
+        "What is the software development lifecycle?",
+        "Explain SDLC",
     ],
+    score_threshold=0.3,
 )
 
 finance = Route(
@@ -121,15 +124,19 @@ general = Route(
 hr = Route(
     name="hr",
     utterances=[
-        "What is the hiring plan for this quarter?",
-        "Show me onboarding checklist",
-        "How does performance appraisal work?",
-        "What is disciplinary action procedure?",
-        "How are grievances handled?",
-        "What is promotion process?",
-        "What are HR policies?",
-        "What is attrition rate?",
+        "What is the leave balance for Pavan Krishnan?",
+        "How many leaves has Pavan Krishnan taken?",
+        "What is the employment status of the HR Executive?",
+        "Who is the HR Executive in Lucknow?",
+        "How can I contact the HR Executive?",
+        "How many female employees are in HR?",
+        "What is the average salary for Senior HR Executives?",
+        "How many employees are in Lucknow?",
+        "What is the total leave balance for employees in Technology department?",
+        "How many employees have performance rating above 4?",
+        "How many employees are in the Finance department?",
     ],
+    score_threshold=0.3,
 )
 
 marketing = Route(
@@ -232,10 +239,16 @@ class SimpleSemanticRouterGuardrail:
         detect_pii(user_input)
         detect_prompt_injection(user_input)
 
+        print(f"Routing query: '{user_input}'")
+
         if not user_input or not user_input.strip():
             return "hr_general", False, None
 
         result = self.router(user_input)
+
+        print(f"Result: {result}")
+        if result:
+            print(f"Name: {result.name}, Score: {getattr(result, 'score', None)}")
 
         if result and result.name == "off_topic":
             return "off_topic", True, OFF_TOPIC_REPLY
@@ -264,7 +277,10 @@ def route_query(query: str, session_id: str = None) -> str:
         ValueError → if blocked
     """
 
+    print(f"Received query: '{query}'")
     route_name, blocked, reply = guardrail(query, session_id)
+
+    print(f"Routed to: '{route_name}', Blocked: {blocked}")
 
     if blocked:
         raise ValueError(reply)
